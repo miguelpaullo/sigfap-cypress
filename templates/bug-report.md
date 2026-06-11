@@ -27,6 +27,9 @@ Ambiente
 Severidade
 [Crítica / Alta / Média / Baixa]
 
+Prioridade
+[Alta / Média / Baixa]
+
 Evidências
 [Link ou anexo de print, vídeo ou log]
 ```
@@ -101,6 +104,22 @@ Informe onde o bug foi encontrado.
 |**Alta**|Funcionalidade principal comprometida|
 |**Média**|Existe contorno, mas afeta o uso|
 |**Baixa**|Impacto visual ou pequeno desvio|
+
+---
+
+### Prioridade 
+
+|Prioridade|Quando usar|
+|-|-|
+|**Alta**|Impede ou compromete significativamente a execução do fluxo testado|
+|**Média**|Permite continuar o uso/teste, mas com limitações ou contornos|
+|**Baixa**|Pequeno impacto, não impede o uso nem a execução dos testes|
+
+---
+### Severidade X Prioridade
+
+**Severidade:** impacto do defeito no sistema.  
+**Prioridade:** urgência de correção do defeito.
 
 ---
 
