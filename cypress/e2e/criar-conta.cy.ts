@@ -16,11 +16,11 @@ describe("Criação de conta no sistema", () => {
         cy.get('[data-cy="open-sexo"]').click();
         cy.get('[data-cy="' + toCyString(dados.sexo) + '"]').click();
         cy.get('[data-cy="documento"]').type(dados.cpf);
-        cy.get(".css-kh7nmy").click(); //botão "Próximo"
+        cy.get('[data-cy="register-next-button"]').click(); //botão "Próximo"
         cy.get('[data-cy="email"]').type(dados.email);
         cy.get('[data-cy="senha"]').type(dados.senha);
         cy.get('[data-cy="senhaConfirmar"]').type(dados.senhaConfirmar);
-        cy.get(".css-kh7nmy").click(); //botão "Próximo"
+        cy.get('[data-cy="register-next-button"]').click(); //botão "Próximo"
         cy.get(".css-d2d35v").click(); //checkbox "Aceite dos termos de uso"
         cy.get('[data-cy="finalizar"]').click();
         //Conta criada, caso o usuário já exista, o sistema exibe uma mensagem de erro, o usuário não é criado mas o teste finaliza sem erros.

@@ -1,0 +1,22 @@
+{
+    "cep": "79080810",
+    "endereco": "Rua Nove de Julho",
+    "numero": "414",
+    "bairro": "Vila Ipiranga",
+    "estado": "Mato Grosso do Sul",
+    "cidade": "Campo Grande",
+    "siglaUF": "UFMS/Universidade Federal do Mato Grosso do Sul",
+    "siglaUnidade": "FACOM/Faculdade de Computação",
+    "nivel": "Ensino Superior",
+    "lattes": "www.meuLattes.com.br",
+    "linkedin": "www.meuLattes.com.br",
+    "areaGrandeConhecimento": "Engenharias",
+    "areaConhecimento": "Engenharia Nuclear",
+    "subArea": "Tecnologia dos Reatores",
+    "especialidade": "Aspectos Econômicos de Reatores",
+    "vinculo": "Servidor Público",
+    "data": "17/06/2025",
+    "regime": "Tempo Integral",
+    "funcao": "Professor Adjunto",
+    "dataFuncao": "17/06/2026"
+}
