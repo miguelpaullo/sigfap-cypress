@@ -1,0 +1,20 @@
+{
+    "titulo": "Edital Fusão nuclear",
+    "evento" : "Congresso",
+    "estado" : "Mato Grosso do Sul",
+    "cidade" : "Campo Grande",
+    "duracao": "08",
+    "instituicao": "UFMS/Universidade Federal do Mato Grosso do Sul",
+    "unidade": "FACOM/Faculdade de Computação",
+    "perguntaComplementar": "abcdefghijklmnopqrst",
+    "pais": "Brasil",
+    "sexo": "Feminino",
+    "raca": "Pardo(a)",
+    "financiamento": "Faixa A (R$ 500,00 - R$ 10.000,00)",
+    "tipoBolsa": "AT",
+    "valorBolsa": "NS (R$ 770,00)",
+    "valorTotal": "6.160,00",
+    "quantidadeBolsa": "2",
+    "duracaoBolsa": "4",
+    "tipoDocumento": "Carta de Apresentação *"
+}
