@@ -38,3 +38,14 @@ Cypress.Commands.add("abrirPerfil", () => {
 
   cy.get('[data-cy="dados-pessoais"]').should("be.visible");
 });
+
+Cypress.Commands.add("navegacaoSubmissao", (nomeEdital) => {
+  cy.get('[data-cy="editais-ver-mais"]').click();
+
+  cy.contains('p', nomeEdital)
+    .closest('div')
+    .contains('button', 'Visualizar edital')
+    .click();
+
+  cy.get('[data-cy="criar-proposta"]').click();
+});
