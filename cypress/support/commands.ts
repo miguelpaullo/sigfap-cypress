@@ -30,3 +30,11 @@ Cypress.Commands.add("typeLogin", (username, password) => {
   cy.get('[data-cy="senha"]').type(password);
   cy.get('[data-cy="loginButton"]').click(); //Botão Acessar da página principal
 });
+
+Cypress.Commands.add("abrirPerfil", () => {
+  cy.get('[data-cy="user-menu"]').click();
+
+  cy.get('[data-cy="editar-perfil"]').should("be.visible").click();
+
+  cy.get('[data-cy="dados-pessoais"]').should("be.visible");
+});

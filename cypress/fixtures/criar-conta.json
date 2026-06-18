@@ -1,9 +1,9 @@
 {
-  "nome": "João Neves Teste",
+  "nome": "Maria Souza",
   "dataNascimento": "15/04/1987",
-  "sexo": "Masculino",
-  "email": "joao.neves@sig.com",
-  "cpf": "30696436043",
-  "senha": "@Dev12345",
-  "senhaConfirmar": "@Dev12345"
+  "sexo": "Feminino",
+  "email": "maria.souza@sig.com",
+  "cpf": "954.592.460-83",
+  "senha": "Abc@1aaa",
+  "senhaConfirmar": "Abc@1aaa"
 }
