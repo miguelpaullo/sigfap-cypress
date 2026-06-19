@@ -3,9 +3,14 @@ import { toCyString } from "../helpers/kebab.helper";
 describe("Submeter proposta no sistema", () => {
   context("Submeter proposta com dados válidos", () => {
 
+    beforeEach(() => {
+        cy.fixture("criar-conta").then((dados) => {
+        cy.typeLogin(dados.email, dados.senha);
+      });
+    })
+    
     it("Completa Informações iniciais com dados válidos", () => {
       cy.fixture("submeter-proposta").then((dados) => {
-        cy.typeLogin("maria.souza@sig.com", "Abc@1aaa");
         cy.navegacaoSubmissao("Edital 2026-0001 Sig Cypress");
         cy.get('[data-cy="titulo"]').should("be.visible").click();
         cy.get('[data-cy="titulo"]').type(dados.titulo);
@@ -26,7 +31,6 @@ describe("Submeter proposta no sistema", () => {
 
     it("Completa Informações Complementares com dados válidos", () => {
       cy.fixture("submeter-proposta").then((dados) => {
-        cy.typeLogin("maria.souza@sig.com", "Abc@1aaa");
         cy.get('[data-cy="propostas-edital-fusao-nuclear"]').click();
         cy.get('[data-cy="informacoes-complementares"]').click();
         cy.get('[data-cy="formularioPropostaInformacaoComplementar.pergunta-218-item-pequena-faturamento-ano-de-r-360"]').should("be.visible").click();
@@ -38,7 +42,6 @@ describe("Submeter proposta no sistema", () => {
 
     it("Confirma Dados pessoais com dados válidos", () => {
       cy.fixture("submeter-proposta").then((dados) => {
-        cy.typeLogin("maria.souza@sig.com", "Abc@1aaa");
         cy.get('[data-cy="propostas-edital-fusao-nuclear"]').click();
         cy.get('[data-cy="coordenacao"]').click();
         cy.get('[data-cy="dados-pessoais"]').click();
@@ -54,7 +57,6 @@ describe("Submeter proposta no sistema", () => {
 
     it("Confirma Endereço com dados válidos", () => {
       cy.fixture("submeter-proposta").then((dados) => {
-        cy.typeLogin("maria.souza@sig.com", "Abc@1aaa");
         cy.get('[data-cy="propostas-edital-fusao-nuclear"]').click();
         cy.get('[data-cy="coordenacao"]').click();
         cy.get('[data-cy="endereco"]').click();
@@ -66,7 +68,6 @@ describe("Submeter proposta no sistema", () => {
 
     it("Confirma Dados Academicos com dados válidos", () => {
       cy.fixture("submeter-proposta").then((dados) => {
-        cy.typeLogin("maria.souza@sig.com", "Abc@1aaa");
         cy.get('[data-cy="propostas-edital-fusao-nuclear"]').click();
         cy.get('[data-cy="coordenacao"]').click();
         cy.get('[data-cy="dados-academicos"]').click();
@@ -78,7 +79,7 @@ describe("Submeter proposta no sistema", () => {
 
     it("Confirma Dados Profissionais com dados válidos", () => {
       cy.fixture("submeter-proposta").then((dados) => {
-        cy.typeLogin("maria.souza@sig.com", "Abc@1aaa");
+      
         cy.get('[data-cy="propostas-edital-fusao-nuclear"]').click();
         cy.get('[data-cy="coordenacao"]').click();
         cy.get('[data-cy="dados-profissionais"]').click();
@@ -90,7 +91,7 @@ describe("Submeter proposta no sistema", () => {
 
     it("Completa Descrição com dados válidos", () => {
       cy.fixture("submeter-proposta").then((dados) => {
-        cy.typeLogin("maria.souza@sig.com", "Abc@1aaa");
+        
         cy.get('[data-cy="propostas-edital-fusao-nuclear"]').click();
         cy.get('[data-cy="apresentacao"]').click();
         cy.get('[data-cy="descricao"]').click();
@@ -104,7 +105,7 @@ describe("Submeter proposta no sistema", () => {
 
     it("Completa a seção Bolsa com dados válidos", () => {
       cy.fixture("submeter-proposta").then((dados) => {
-        cy.typeLogin("maria.souza@sig.com", "Abc@1aaa");
+        
         cy.get('[data-cy="propostas-edital-fusao-nuclear"]').click();
         cy.get('[data-cy="apresentacao"]').click();
         cy.get('[data-cy="orcamento"]').click();
@@ -127,7 +128,6 @@ describe("Submeter proposta no sistema", () => {
 
     it("Completa o Financiamento com dados válidos", () => {
       cy.fixture("submeter-proposta").then((dados) => {
-        cy.typeLogin("maria.souza@sig.com", "Abc@1aaa");
         cy.get('[data-cy="propostas-edital-fusao-nuclear"]').click();
         cy.get('[data-cy="apresentacao"]').click();
         cy.get('[data-cy="orcamento"]').click();
@@ -142,7 +142,7 @@ describe("Submeter proposta no sistema", () => {
 
     it("Completa a seção anexos com dados válidos", () => {
       cy.fixture("submeter-proposta").then((dados) => {
-        cy.typeLogin("maria.souza@sig.com", "Abc@1aaa");
+
         cy.get('[data-cy="propostas-edital-fusao-nuclear"]').click();
         cy.get('[data-cy="anexos"]').click();
         cy.get('[data-cy="documentos-da-proposta"]').should("be.visible").click();
@@ -157,7 +157,7 @@ describe("Submeter proposta no sistema", () => {
 
     it("Aceita o termo de aceite", () => {
       cy.fixture("submeter-proposta").then((dados) => {
-        cy.typeLogin("maria.souza@sig.com", "Abc@1aaa");
+
         cy.get('[data-cy="propostas-edital-fusao-nuclear"]').click();
         cy.get('[data-cy="finalizacao"]').click();
         cy.get('[data-cy="termo-de-aceite"]').click();
@@ -169,7 +169,7 @@ describe("Submeter proposta no sistema", () => {
 
     it("Completa a seção de visualização com dados válidos", () => {
       cy.fixture("submeter-proposta").then((dados) => {
-        cy.typeLogin("maria.souza@sig.com", "Abc@1aaa");
+        
         cy.get('[data-cy="propostas-edital-fusao-nuclear"]').click();
         cy.get('[data-cy="finalizacao"]').click();
         cy.get('[data-cy="visualizacao-da-proposta"]').click();
@@ -180,7 +180,7 @@ describe("Submeter proposta no sistema", () => {
 
     it("Verifica se existe pendências e submete proposta", () => {
       cy.fixture("submeter-proposta").then((dados) => {
-        cy.typeLogin("maria.souza@sig.com", "Abc@1aaa");
+
         cy.get('[data-cy="propostas-edital-fusao-nuclear"]').click();
         cy.get('[data-cy="menu-verificar-pendencias"]').click();
         cy.get('[data-cy="menu-salvar"]').click();
