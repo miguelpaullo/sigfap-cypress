@@ -1,9 +1,9 @@
 {
-  "nome": "Maria Souza",
-  "dataNascimento": "15/04/1987",
-  "sexo": "Feminino",
-  "email": "maria.souza@sig.com",
-  "cpf": "954.592.460-83",
-  "senha": "Abc@1aaa",
-  "senhaConfirmar": "Abc@1aaa"
+  "nome": "Juliano Jones de Sena",
+  "dataNascimento": "03/06/2000",
+  "sexo": "Masculino",
+  "email": "juliano.jones@gmail.com",
+  "cpf": "236.603.530-60",
+  "senha": "Senha@123",
+  "senhaConfirmar": "Senha@123"
 }
