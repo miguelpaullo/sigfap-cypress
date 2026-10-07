@@ -5,5 +5,5 @@
     "sourceMap": true,
     "types": ["cypress", "node", "cypress-real-events"]
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "**/*.d.ts"]
 }

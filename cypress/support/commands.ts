@@ -1,3 +1,5 @@
+/// <reference path="./commands.d.ts" />
+
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
@@ -24,7 +26,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add("typeLogin", (username, password) => {
+Cypress.Commands.add("typeLogin", (username: string, password: string) => {
   cy.visit("/");
   cy.get('[data-cy="email"]').type(username);
   cy.get('[data-cy="senha"]').type(password);
@@ -39,12 +41,12 @@ Cypress.Commands.add("abrirPerfil", () => {
   cy.get('[data-cy="dados-pessoais"]').should("be.visible");
 });
 
-Cypress.Commands.add("navegacaoSubmissao", (nomeEdital) => {
+Cypress.Commands.add("navegacaoSubmissao", (nomeEdital: string) => {
   cy.get('[data-cy="editais-ver-mais"]').click();
 
-  cy.contains('p', nomeEdital)
-    .closest('div')
-    .contains('button', 'Visualizar edital')
+  cy.contains("p", nomeEdital)
+    .closest("div")
+    .contains("button", "Visualizar edital")
     .click();
 
   cy.get('[data-cy="criar-proposta"]').click();
