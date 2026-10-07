@@ -4,7 +4,8 @@ describe("Criação de conta no sistema", () => {
   context("Criação de conta com dados válidos", () => {
     it("Cria uma conta com dados válidos", () => {
       cy.visit("/");
-      cy.get(".css-j9tmj0").click(); 
+      cy.get(".css-j9tmj0").click();
+
       cy.fixture("criar-conta").then((dadosCadastro) => {
         cy.get('[data-cy="nome"]').type(dadosCadastro.nome);
         cy.get('[data-cy="dataNascimento"]').type(dadosCadastro.dataNascimento);
@@ -16,14 +17,16 @@ describe("Criação de conta no sistema", () => {
         cy.get('[data-cy="senha"]').type(dadosCadastro.senha);
         cy.get('[data-cy="senhaConfirmar"]').type(dadosCadastro.senhaConfirmar);
         cy.get('[data-cy="register-next-button"]').click();
-        cy.get(".css-d2d35v").click(); //checkbox "Aceite dos termos de uso"
+        cy.get(".css-d2d35v").click();
         cy.get('[data-cy="finalizar"]').click();
       });
     });
+  });
 
-    it("Visita a página inicial usando as credenciais do usuário na fixture", () => {
-      cy.fixture("criar-conta").then((dados) => {
-        cy.typeLogin(dados.email, dados.senha);
+  context("Autenticação com dados válidos", () => {
+    it("Realiza login com credenciais válidas", () => {
+      cy.fixture("criar-conta").then((credenciais) => {
+        cy.typeLogin(credenciais.email, credenciais.senha);
         cy.get('[data-cy="user-menu"]').should("be.visible");
       });
     });
