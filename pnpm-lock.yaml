@@ -18,6 +18,9 @@ importers:
       cypress:
         specifier: ^15.15.0
         version: 15.15.0
+      prettier:
+        specifier: 3.9.9
+        version: 3.9.9
       remove-accents:
         specifier: ^0.5.0
         version: 0.5.0
@@ -494,6 +497,11 @@ packages:
   pify@2.3.0:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
+
+  prettier@3.9.9:
+    resolution: {integrity: sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   pretty-bytes@5.6.0:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
@@ -1179,6 +1187,8 @@ snapshots:
   performance-now@2.1.0: {}
 
   pify@2.3.0: {}
+
+  prettier@3.9.9: {}
 
   pretty-bytes@5.6.0: {}
 
